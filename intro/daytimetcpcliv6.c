@@ -14,6 +14,8 @@ main(int argc, char **argv)
 		err_sys("socket error");
 
 	bzero(&servaddr, sizeof(servaddr));
+
+	// 使用IPv6协议
 	servaddr.sin6_family = AF_INET6;
 	servaddr.sin6_port   = htons(13);	/* daytime server */
 	if (inet_pton(AF_INET6, argv[1], &servaddr.sin6_addr) <= 0)

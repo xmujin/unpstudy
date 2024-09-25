@@ -1,4 +1,10 @@
 #include	"unp.h"
+#include <strings.h>
+
+#ifdef _ISOC11_SOURCE
+	int qq();
+#endif
+
 
 int
 main(int argc, char **argv)
